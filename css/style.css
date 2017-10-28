@@ -1,0 +1,231 @@
+main {
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+#welcome-section {
+  height: 100vh;
+  width: 100%;
+  /* 2. The height of the welcome section should be equal to the height of the viewport. */
+  background-image: url("Office.jpg");
+  background-position: center center;
+  background-size: cover;
+  
+  display: flex;
+  flex-flow: row;
+}
+#about {
+  height: 100vh;
+  width: 100%;  
+  background-image: url("Building Background.jpg");
+  background-position: center center;
+  background-size: cover;
+  
+  display: flex;
+  flex-flow: row;
+}
+#projects {
+  background-image: url("Silver Metallic Background.jpg");
+  background-position: center center;
+  background-size: cover;
+  padding: 90px 3vw 110px 3vw;
+}
+#contact {
+  height: 100vh;
+  width: 100%;
+  background-image: url("Laptop.jpeg");
+  background-position: center center;
+  background-size: cover;
+  
+  display: flex;
+  flex-flow: row;
+}
+.gutter {
+  flex: 1;
+}
+.center {
+  flex: 10;
+  background: rgba(255,255,255,0.7);
+  padding-top: 110px;
+  position: relative;
+}
+.logo {
+  max-width: 15vw; 
+  display: block; 
+  height: auto;
+  margin: auto;
+/*   margin-top: 110px; */
+}
+h1 {
+  color: #780202;
+  font-weight: 700;
+  text-align: center;
+  font-size: 5vw;
+}
+h2 {
+  color: #780202;
+  font-weight: 400;
+  text-align: right;
+  font-size: 2vw;
+  margin-right: 8vw;
+  line-height: .1vw;
+  font-style: italic;
+}
+hr {
+  color: #052ba0;
+  background-color: #052ba0;
+  height: .5vw;
+}
+#list {
+  list-style-type: none;
+  color: #780202;
+  text-align: center;
+  font-size: 7vmin;
+  margin: auto;
+  padding: 0;
+}
+p {
+  color: #780202;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  font-size: 3.9vmin;
+  text-align: left;
+}
+img.float {
+  float: right;
+  margin: 0 0 3vw 3vw;
+  max-height: 70vh;
+  max-width: 30vw;
+}
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto auto;
+  grid-gap: 2vw;
+  grid-template-areas: "header header header"
+                       "project1 project2 project3"
+                       "project4 project5 project6"
+}
+/* 1. My portfolio should have at least one media query. */
+@media screen and (max-width: 1000px) {
+  .portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto auto auto;
+  grid-gap: 2vw;
+  grid-template-areas: "header header"
+                       "project1 project2"
+                       "project3 project4"
+                       "project5 project6"
+  }
+}
+@media screen and (max-width: 500px) {
+  .portfolio {
+  padding: 1vh 5vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto auto auto auto auto;
+  grid-gap: 2vw;
+  grid-template-areas: "header"
+                       "project1"
+                       "project2"
+                       "project3"
+                       "project4"
+                       "project5"
+                       "project6"
+  }
+}
+h3 {
+  color: #780202;
+  font-weight: 700;
+  text-align: center;
+  font-size: 5vw;
+}
+.header {
+  grid-area: header;
+}
+.project1 {
+  grid-area: project1;
+}
+.project2 {
+  grid-area: project2;
+}
+.project3 {
+  grid-area: project3;
+}
+.project4 {
+  grid-area: project4;
+}
+.project5 {
+  grid-area: project5;
+}
+.project6 {
+  grid-area: project6;
+}
+figcaption {
+  text-align: center;
+  color: #052ba0;
+  background-color: #FFF;
+}
+.email {
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  color: #052ba0;
+}
+.email:visited {
+  color: #052ba0;
+}
+.email:hover {
+  color: #780202;
+}
+.social {
+  display: grid;
+  grid-template-columns: 7vmin 7vmin 7vmin 7vmin ;
+  grid-template-rows: 7vmin;
+  grid-gap: 1vmin;
+  font-size: 5vmin;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  width: 31vmin;
+  position: absolute;
+  bottom: 4vmin;
+  right: 0vmin;
+  left: 0vmin;
+}
+.twitter {
+  color: #fff;
+  background-color: #222222;
+}
+.twitter:hover {
+  transform: scale(1.1);
+  color: #b5c7fd;
+  box-shadow: 0px 0px 10px 4px #527cfa;
+}
+.gitHub {
+  color: #fff;
+  background-color: #222222;
+}
+.gitHub:hover {
+  transform: scale(1.1);
+  color: #b5c7fd;
+  box-shadow: 0px 0px 10px 4px #527cfa;
+}
+.linkedIn {
+  color: #fff;
+  background-color: #222222;
+}
+.linkedIn:hover {
+  transform: scale(1.1);
+  color: #b5c7fd;
+  box-shadow: 0px 0px 10px 4px #527cfa;
+}
+.freeCodeCamp {
+  color: #fff;
+  background-color: #222222;
+}
+.freeCodeCamp:hover {
+  transform: scale(1.1);
+  color: #b5c7fd;
+  box-shadow: 0px 0px 10px 4px #527cfa;
+}
